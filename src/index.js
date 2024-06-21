@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import Block from "./pages/Block";
 import Address from "./pages/Address";
+import Transactions from "./pages/Transaction";
 
 const router = createBrowserRouter([
   {
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/tx/:txHash",
-    element: <div>transaction has</div>,
+    element: <Transactions />,
   },
   {
     path: "/address/:address",
@@ -35,7 +36,7 @@ ReactDOM.render(
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>,
-  document.getElementById("root"),
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
